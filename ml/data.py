@@ -4,7 +4,9 @@ from sklearn.preprocessing import LabelBinarizer, OneHotEncoder, StandardScaler
 def process_data(
     X, categorical_features=[], label=None, training=True, encoder=None, lb=None, scaler=None
 ):
-    # Add Feature scaler for continuous features. 
+    # Add skilearn.Standardscaler for feature Scaling for Continuous Variables. 
+    # These can be used for models that are sensitive to the scale of the features, such as SVMs or logistic regression. 
+    # Probably won't use in this case but good to have in the pipeline.
     
     """
     Process the data used in the machine learning pipeline.
