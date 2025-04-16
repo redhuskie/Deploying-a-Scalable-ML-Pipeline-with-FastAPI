@@ -1,7 +1,11 @@
 import pickle
+import pandas as pd
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
-# TODO: add necessary import
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
+# TODO: Import census.csv
+df = pd.read_csv('data/census.csv')
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -20,7 +24,26 @@ def train_model(X_train, y_train):
         Trained machine learning model.
     """
     # TODO: implement the function
-    pass
+    # Added Hyperparameter tuning using GridSearchCV
+    rf = RandomForestClassifier(random_state=)
+
+    param_grid = {
+        'n_estimators': [50,100, 200],
+        'max_depth': [None, 10, 20],
+        'min_samples_split': [2, 5],
+        'min_samples_leaf': [1, 2],
+        'bootstrap': [True, False]
+    }
+    
+    grid_search = GridSearchCV(
+                               estimator=rf, 
+                               param_grid=param_grid, 
+                               cv=3, 
+                               n_jobs=-1, 
+                               verbose=2)
+    
+    grid_search.fit(X_train, y_train)
+    return grid_search.best_estimator_
 
 
 def compute_model_metrics(y, preds):
@@ -60,7 +83,8 @@ def inference(model, X):
         Predictions from the model.
     """
     # TODO: implement the function
-    pass
+    preds = model.predict(X)
+    return preds
 
 def save_model(model, path):
     """ Serializes model to a file.

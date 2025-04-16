@@ -28,6 +28,9 @@ Working in a command line environment is recommended for ease of use with git an
     * GET on the root giving a welcome message.
     * POST that does model inference.
 
-# File Updates for Proeject
+# Project Notes and Updates. 
 1. Create python-ci.yaml with Github action. 
-2. Updated ML/Data.py with skilearn.scaler 
+2. Updated ML/Data.py with skilearn.scaler.
+3. Added Import Pandas and wrote import for data/census.csv in ml/model.py
+4. Added HyperParameter Tuning with GridSearchC to Function ml/model.py.def train_model
+5. Add RandomForestClassifier to Function ml/model.py/def.train_model
