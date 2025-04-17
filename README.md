@@ -32,5 +32,15 @@ Working in a command line environment is recommended for ease of use with git an
 1. Create python-ci.yaml with Github action. 
 2. Updated ML/Data.py with skilearn.scaler.
 3. Added Import Pandas and wrote import for data/census.csv in ml/model.py
-4. Added HyperParameter Tuning with GridSearchC to Function ml/model.py.def train_model
-5. Add RandomForestClassifier to Function ml/model.py/def.train_model
+4. Updated ml/model.py.def_train with HyperParameter Tuning using       GridSearchCV
+5. Updated ml/model.py.def_train with RandomForestClassifier 
+6. Updated ml/model.py.def.inference with preds = model.predict(X) 
+7. Updated ml/model.save w import joblib for save/load model functions in ml/model.py
+8. Updated with  joblib.dump(model, path) for saving model
+8. Updated ml/model.py.save_model with joblib.dump(model, path) to  save model
+9. Updated ml/model.py.load_model with return joblib.load(path) to load model.
+10. Added code to ml/model.def.performance_on_categorical_slice to computer model metrics. 
+11. Added three test units in test_ml.py
+    a. Test that train_model returns a RandomForestClassifier with a predict method
+    b. Test to ensure inference returns predictions matching input length.
+    c. Test that performance_on_categorical_slice returns precision, recall, fbeta values.
