@@ -149,7 +149,7 @@ def performance_on_categorical_slice(
     if data_slice.empty:
         return None, None, None
 
-    # Process the sliced data — must unpack all 5 return values
+    # Process the sliced data 
     X_slice, y_slice, _, _, _ = process_data(
         data_slice,
         categorical_features=categorical_features,

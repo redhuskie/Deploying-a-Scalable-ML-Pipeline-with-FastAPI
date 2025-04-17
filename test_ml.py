@@ -5,9 +5,8 @@ from ml.model import train_model, inference
 from ml.data import process_data
 from ml.model import performance_on_categorical_slice  # if you put the slice code there
 from sklearn.ensemble import RandomForestClassifier
-# TODO: add necessary imports
 
-# TODO: implement the first test. Change the function name and input as needed
+# Test 1
 def test_one():
     """
     Test that train_model returns a RandomForestClassifier with a predict method.
@@ -29,7 +28,7 @@ def test_one():
     assert isinstance(model, RandomForestClassifier), "Model is not a RandomForestClassifier"
     assert hasattr(model, "predict"), "Model does not have a predict method"
 
-# TODO: implement the second test. Change the function name and input as needed
+# Test Two
 def test_two():
     """
     # Test to ensure inference returns predictions matching input length.
@@ -45,13 +44,11 @@ def test_two():
     preds = inference(model, X)
     
     assert len(preds) == len(X), "Predictions length does not match input data length"
-# TODO: implement the third test. Change the function name and input as needed
+# Test 3
 def test_three():
     """
     Test that performance_on_categorical_slice returns valid precision, recall, and fbeta values.
     """
-    
-
     
     df = pd.DataFrame({
         "education": ["Bachelors", "Masters", "Bachelors", "PhD", "Masters", "Bachelors"],

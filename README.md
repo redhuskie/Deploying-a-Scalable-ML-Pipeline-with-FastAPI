@@ -32,15 +32,33 @@ Working in a command line environment is recommended for ease of use with git an
 1. Create python-ci.yaml with Github action. 
 2. Updated ML/Data.py with skilearn.scaler.
 3. Added Import Pandas and wrote import for data/census.csv in ml/model.py
-4. Updated ml/model.py.def_train with HyperParameter Tuning using       GridSearchCV
+4. Updated ml/model.py.def_train with HyperParameter Tuning using GridSearchCV
 5. Updated ml/model.py.def_train with RandomForestClassifier 
 6. Updated ml/model.py.def.inference with preds = model.predict(X) 
 7. Updated ml/model.save w import joblib for save/load model functions in ml/model.py
-8. Updated with  joblib.dump(model, path) for saving model
-8. Updated ml/model.py.save_model with joblib.dump(model, path) to  save model
+8. Updated ml/model.py.save_model with joblib.dump(model, path) to save model
 9. Updated ml/model.py.load_model with return joblib.load(path) to load model.
 10. Added code to ml/model.def.performance_on_categorical_slice to computer model metrics. 
 11. Added three test units in test_ml.py
     a. Test that train_model returns a RandomForestClassifier with a predict method
     b. Test to ensure inference returns predictions matching input length.
     c. Test that performance_on_categorical_slice returns precision, recall, fbeta values.
+12. Ran all unit tests and uploaded screenshot UnitTestsPassed.jpg to screenshotfolder.
+13. Added path for encoder, scaler, and model in main.py
+14. Added FastAPI code in main.py
+15. Added Welcome Message in main.py
+16. Updated data_processed with necessary code.  
+17. Ran Train_Save and saved screenshot to directory.  
+18. Added Post/Get screenshots to directory
+19. Updated local_api.py, ran and added screenshot to directory. 
+20. Updated model_cad.md with necessary information. 
+21. Useful links
+    GridSearchCV: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+    HyperParameter Tuning: https://scikit-learn.org/stable/modules/grid_search.html
+    Model_Cards: https://www.kaggle.com/code/var0101/model-cards
+    RandomForestClassifier: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+    Unit Testing in Python: https://realpython.com/python-testing/
+    Encoding Categorical Data in Sklearn: https://www.geeksforgeeks.org/encoding-categorical-data-in-sklearn/
+    train-test-split: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+
+
