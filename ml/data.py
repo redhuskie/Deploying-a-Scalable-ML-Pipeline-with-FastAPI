@@ -45,7 +45,6 @@ def process_data(
         return X, y, encoder, lb, scaler
     
 
-
 def apply_label(inference):
     """Convert the binary label in a single inference sample into string output."""
     if inference[0] == 1:
