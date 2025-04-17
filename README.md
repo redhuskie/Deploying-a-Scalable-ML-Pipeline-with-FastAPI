@@ -60,5 +60,6 @@ Working in a command line environment is recommended for ease of use with git an
     Unit Testing in Python: https://realpython.com/python-testing/
     Encoding Categorical Data in Sklearn: https://www.geeksforgeeks.org/encoding-categorical-data-in-sklearn/
     train-test-split: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+23. Added Screenshots for continuous_integration tests. 
 
 
